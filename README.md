@@ -47,7 +47,10 @@ The server will start at:
 http://localhost:3000
 
 📡 API Documentation
+
 🔹 1. Start / Create Session
+
+
 
 POST /session/:id
 Starts a new WhatsApp session or resumes an existing one.
@@ -57,6 +60,7 @@ Example:
 POST http://localhost:3000/session/mySession
 
 
+
 Response:
 
 {
@@ -64,14 +68,19 @@ Response:
   "message": "Session mySession started/exists"
 }
 
+
+
 🔹 2. Get QR Code
 
 GET /session/:id/qr
 Fetch the QR code for scanning (Base64 encoded image).
 
+
 Example:
 
 GET http://localhost:3000/session/mySession/qr
+
+
 
 
 Response (QR available):
@@ -82,6 +91,8 @@ Response (QR available):
 }
 
 
+
+
 Response (Already connected):
 
 {
@@ -89,6 +100,8 @@ Response (Already connected):
   "message": "Already connected",
   "qr": null
 }
+
+
 
 🔹 3. Send Message
 
